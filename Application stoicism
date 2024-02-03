@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stoic Quotes App</title>
+</head>
+<body>
+
+  <script>
+    // Your JavaScript code goes here
+
+    const stoicQuotes = [
+      "The best revenge is to be unlike him who performed the injustice.",
+      "He who fears death will never do anything worth of a man who is alive.",
+      "It's not that we have a short time to live, but that we waste much of it.",
+      "He who is brave is free.",
+      "It is not that we have a short time to live, but that we waste much of it.",
+    ];
+
+    function getRandomQuote() {
+      const randomIndex = Math.floor(Math.random() * stoicQuotes.length);
+      return stoicQuotes[randomIndex];
+    }
+
+    function displayMessage() {
+      const message = getRandomQuote();
+      alert(message);
+    }
+
+    // Display a quote immediately
+    displayMessage();
+
+    // Set up to display a new quote every 12 hours (in milliseconds)
+    const intervalInMilliseconds = 12 * 60 * 60 * 1000;
+    setInterval(displayMessage, intervalInMilliseconds);
+  </script>
+
+</body>
+</html>
